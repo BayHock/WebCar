@@ -1,0 +1,29 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using NETCore.MailKit.Core;
+using System.Diagnostics;
+using WebCar.Helpers;
+using WebCar.Models;
+
+namespace WebCar.Controllers
+{
+    public class HomeController : Controller
+	{
+		private readonly ILogger<HomeController> _logger;
+
+		public IActionResult Index()
+		{
+			return View();
+		}
+
+		public IActionResult Privacy()
+		{
+			return View();
+		}
+
+		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+		public IActionResult Error()
+		{
+			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+		}
+	}
+}
