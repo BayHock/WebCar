@@ -1,6 +1,6 @@
-﻿namespace WebCar.Helpers
+﻿namespace WebCar.Models
 {
-	public class EmailHelper
+	public class EmailHelperModel
 	{
 		public static string BuildTemplate(string path, string template)
 		{

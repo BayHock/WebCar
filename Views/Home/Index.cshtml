@@ -1,8 +1,18 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using Microsoft.AspNetCore.Identity
+@using WebCar.Areas.Identity.Data
+
+@inject SignInManager<WebCarUser> SignInManager
+@inject UserManager<WebCarUser> UserManager
+
+@{
+	ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@if (SignInManager.IsSignedIn(User))
+{
+	<p>Пользователь вошел в аккаунт</p>
+}
+else
+{
+	<p>Пользователь не вошел в аккаунт - отображается страница описания</p>
+}

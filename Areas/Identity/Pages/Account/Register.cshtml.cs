@@ -12,7 +12,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.Encodings.Web;
 using WebCar.Areas.Identity.Data;
-using WebCar.Helpers;
+using WebCar.Models;
 
 namespace WebCar.Areas.Identity.Pages.Account
 {
@@ -134,7 +134,7 @@ namespace WebCar.Areas.Identity.Pages.Account
 						protocol: Request.Scheme);
 
 					string body = $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.";
-					string mailText = EmailHelper.BuildTemplate(_templatesPath, "ConfirmRegisterEmailTemplate.html");
+					string mailText = EmailHelperModel.BuildTemplate(_templatesPath, "ConfirmRegisterEmailTemplate.html");
 					mailText = mailText.Replace("[username]", user.UserName).Replace("[body]", body);
 
 					await _emailService.SendAsync(Input.Email, "Confirm your email", mailText, true);

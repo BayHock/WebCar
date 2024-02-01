@@ -57,8 +57,6 @@ namespace WebCar.Areas.Identity.Pages.Account
 
 			Email = email;
 
-			DisplayConfirmAccountLink = false;
-
 			return Page();
 		}
 	}
