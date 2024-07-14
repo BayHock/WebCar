@@ -1,4 +1,4 @@
 <h1 align="center">Проект для автоматизации работы автосервиса</h1>
-Backend: ASP.NET Core MVC
-Frontend: Razor, CSS, JavaScript
-СУБД: MS SQL
+<p>Backend: ASP.NET Core MVC</p>
+<p>Frontend: Razor, CSS, JavaScript</p>
+<p>СУБД: MS SQL</p>
