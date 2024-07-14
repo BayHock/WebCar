@@ -3,3 +3,4 @@
 <p>Frontend: Razor, CSS, JavaScript</p>
 <p>СУБД: MS SQL</p>
 <p align="center"><img width=500 height=300 src="https://github.com/user-attachments/assets/f586bf8c-be05-4543-8a77-d58b1db8b964"/></p>
+<p align="center">Стартовая страница веб-приложения</p>
